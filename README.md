@@ -8,7 +8,7 @@ golang hooks for http://pre-commit.com/
 
 Add this to your `.pre-commit-config.yaml`
 
-    - repo: git://github.com/dnephin/pre-commit-golang
+    - repo: git://github.com/h4ckm03d/pre-commit-golang
       rev: master
       hooks:
         - id: go-fmt
@@ -25,6 +25,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-unit-tests
         - id: go-build
         - id: go-mod-tidy
+        - id: go-revive
 
 ### Available hooks
 
@@ -44,4 +45,5 @@ Add this to your `.pre-commit-config.yaml`
 - `go-unit-tests` - run `go test -tags=unit -timeout 30s -short -v`
 - `go-build` - run `go build`, requires golang
 - `go-mod-tidy` - run `go mod tidy -v`, requires golang
-- `go-mod-vendor` - run `go mod vendor`, requires golang
+- `go-mod-vendor` - run `go mod vendor`, requires `golang
+- `go-revive` - run `revive -config revive.toml -formatter friendly ./...`

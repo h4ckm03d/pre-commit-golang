@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+exec revive -config revive.toml -formatter friendly ./...
