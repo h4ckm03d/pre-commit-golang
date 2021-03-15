@@ -87,3 +87,10 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go mod vendor`, requires golang"
+-   id: go-revive
+    name: 'go-revive'
+    entry: run-go-revive.sh
+    types: [go]
+    language: 'script'
+    pass_filenames: false
+    description: "Runs `revive`, requires https://github.com/mgechev/revive"
